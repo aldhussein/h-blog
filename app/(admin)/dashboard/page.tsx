@@ -7,11 +7,14 @@ import { authSession, requireAuth } from "@/lib/auth-utils";
 import { Rocket } from "lucide-react";
 import Link from "next/link";
 
+  export const dynamic = "force-dynamic";
 export default async function DashboardPage() {
   await requireAuth();
   const session = await authSession();
   const posts = await getPostsByUser();
   const categories = await getCategoriesWithUser();
+
+
 
   const totalViews = posts.reduce((acc, item) => acc + item.views!, 0);
 
