@@ -29,7 +29,7 @@ export default function NavMenu({ userName, userImage }: NavMenuProps) {
   return (
     <nav className="w-full border-b">
       <div className="container mx-auto flex items-center justify-around p-4">
-        {/* Logo */}
+        {/* Logos*/}
         <Link href="/" className="text-xl font-bold">
           MyApp
         </Link>
